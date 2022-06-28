@@ -3,32 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Github user search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Github user search</title>    
     <link rel="stylesheet" href="./style.css">
+    
 </head>
-<body>
-    <h1>devfinder</h1>
-    <h5>light</h5>
-    <div class="search-container">
-        <input type="text" class="search-bar" placeholder="Search Github username_">
-        <button class="search-btn">Search</button>
-    </div>
-    <div class="text-container">
-        <img src="./the octocat.png" alt="">
-        <h1>The Octocat</h1>
-        <h4>Joined 25 Jan 2011</h4>
-        <p>
-            This profile has no bio
-        </p>
-        <div class="info-container">
-            <h3>Repos</h3>
-            <h3>followers</h3>
-            <h3>following</h3>
+<body class="container">
+    <header class="header flex">
+        <h1 id="header-title" class="fs-600 ff-bold text-dark">devfinder</h1>
+        <button id="header-button" class="hoverClass1 mode uppercase ff-bold text-accent" data="dark" onclick="changeMode()">Dark <img src="./211779_moon_icon.png" alt="icon-dark-mode"></button>
+    </header>
+
+    <main class="main">
+        <div class="search-container">            
+            <img src="./search-icon-png-9965.png" alt="">
+            <label for="search" class="sr-only">Search Github username</label>
+            <input id="search" class="fs-200" placeholder="search github username_">
+            <button class="ff-bold" onclick="getData()">Search</button>               
+        </div>           
+
+        <div class="text-container">
+            <img src="./the octocat.png" alt="" id="obj-avatar" class="avatar">
+            <div class="right-flex" style="--gap: 0.05rem;">
+                <h2 id="name" class="ff-bold fs-500 text-dark"></h2>
+                <a id="username" target="_blank" href=""></a>
+                <p id="date"></p>
+    
+            </div>                                 
+    
+            <p id="bio" class="bio"></p>            
+            
+            
+            <div class="info-container grid">
+                <p class="repos fs-200">Repos</p>
+                <p class="followers fs-200">Followers</p>
+                <p class="following fs-200">Following</p>
+                <p id="obj-repos" class="fs-500 ff-bold text-dark">8</p>
+                <p id="obj-followers" class="fs-500 ff-bold text-dark">12</p>
+                <p id="obj-following" class="fs-500 ff-bold text-dark">11</p>
+    
+            </div>
+    
+            <ul class="list flow grid" style="--gap: 0;">
+                <li id="list-item1"><img src="./location-svgrepo-com.svg" alt="icon-location" class="icon-location"><p id="obj-location"></p></li>
+                <li id="list-item2"><img src="./link-chain-svgrepo-com.svg" alt="icon-website"><a id="obj-website" target="_blank" href=""></a></li>
+                <li id="list-item3"><img src="./icons8-twitter.svg" alt="icon-twitter"><a id="obj-twitter" target="_blank" href=""></a></li>
+                <li id="list-item4"><img src="./company-25.svg" alt="icon-company"><a id="obj-company" target="_blank" href=""></a></li>
+            </ul>
+
         </div>
-        
-    </div>
+
+    </main>   
+
 
     <script src="./app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
 </body>
 </html>

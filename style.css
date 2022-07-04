@@ -70,6 +70,18 @@ img {
     margin-top: 2rem;
 }
 
+@media (min-width: 35rem) {
+    .container {
+        padding-inline: 4rem;
+    }
+}
+
+@media (min-width: 45rem) {
+    .container {
+        padding-inline: 2rem;
+    }
+}
+
 .sr-only {
    position: absolute;
    width: 1px;
@@ -118,6 +130,18 @@ img {
     justify-content: space-between;
     position: relative
     
+}
+
+@media (min-width: 35rem) {
+    .header {
+        margin-top: 8.75rem;
+    }
+}
+
+@media (min-width: 54rem) {
+    .header {
+        margin-top: 9rem;
+    }
 }
 
 .header img {
@@ -171,8 +195,38 @@ img {
     border-radius: 50%;
 }
 
+@media (min-width: 35rem) {
+    .avatar {
+        width: 117px;
+        height: 117px;
+    }
+}
+
 .right {
     flex-direction: column;
+}
+
+@media (min-width: 35rem) {
+    .right {
+        margin-left: 2.5rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (min-width: 54rem) {
+    .right {
+        margin-left: 2.3rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .right :nth-child(1) {
+        margin-right: 15rem;
+    }
+
+    #bio {
+        margin-left: 10.5rem;
+    }
 }
 
 #name {
@@ -183,10 +237,29 @@ img {
 
 }
 
+@media (min-width: 35rem) {
+    #name {
+        font-size: var(--fs-600);
+    }
+}
+
 #username {
     position: relative;
     bottom: .9rem;
     order: 2;
+}
+
+@media (min-width: 35rem) {
+    #username {
+        bottom: 0;
+    }
+}
+
+@media (min-width: 54rem) {
+    #username {
+        bottom: 1.5rem;
+        order: 3;
+    }
 }
 
 .text-container a {
@@ -199,10 +272,31 @@ img {
     order: 3;
 }
 
+@media (min-width: 35rem) {
+    #date {
+        top: .5rem;
+    }
+}
+
+@media (min-width: 54rem) {
+    #date {
+        position: initial;
+        top: 21rem;
+        order: 2;
+    }
+}
+
 .bio {
     margin-top: 2.07rem;
     margin-bottom: 1.45rem;
     padding-inline: 1.5rem;
+}
+
+@media (min-width: 54rem) {
+    #obj-bio {
+        margin-left: 10.5rem;
+        margin-top: 0;
+    }
 }
 
 .info-container {
@@ -218,6 +312,32 @@ img {
     padding-bottom: 1.1rem;
     justify-content: space-around;
 }
+
+@media (max-width: 315px) {
+    .info-container {
+        grid-template-areas: 
+        'repos'
+        'nbr-repos'
+        'followers'
+        'nbr-followers'
+        'following'
+        'nbr-following';
+        place-items: center;
+        row-gap: 0;
+    }
+
+    .followers, .following {
+        margin-top: .8rem;
+    }
+}
+
+@media (min-width: 54rem) {
+    .info-container {
+        margin-left: 12rem;
+    }
+}
+
+
 
 .repos {
     grid-area: repos;
@@ -259,6 +379,26 @@ img {
     overflow-wrap: break-word;
 }
 
+@media (min-width: 700px) {
+    .list {
+        grid-template-areas: 
+        'item1 item3'
+        'item2 item4';
+        grid-template-columns: 50%;
+    }
+
+    .list > #list-item1 {
+        position: relative;
+        top: 1.5rem;
+    }
+}
+
+@media (min-width: 54rem) {
+    .list {
+        margin-left: 10rem;
+    }
+}
+
 #list-item1 {
     grid-area: item1;
 }
@@ -297,6 +437,12 @@ img {
     opacity: .5;
 }
 
+@media (max-width: 315px) {
+    .list a, .list p  {
+        font-size: .8rem;
+    }
+}
+
 .search-container {
     flex-direction: row;
     width: 100%;
@@ -331,8 +477,9 @@ img {
     width: 5.25rem;
     border-radius: 10px;
     border: none;
-    left: 37.5rem;
+    right: .35rem;
     bottom: .85rem;
+    left: 37.5rem;   
    
 }
 
@@ -342,6 +489,21 @@ img {
 
 .search-container button:active {
     transform: translateY(1px);
+}
+
+@media (max-width: 370px) {
+
+    .main input {
+        font-size: 8px;
+    }
+
+    .searchBar button {
+        font-size: 10px;   
+        height: 2.4rem;
+        width: 3.75rem;
+        top: .25rem;
+        
+    }
 }
 
 .list img {

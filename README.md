@@ -12,13 +12,17 @@ The challenge involved the user being able to
 **Links**
 
 solution url: https://github.com/JeremyKungu/github-user-search
+
 live-site url: https://jeremykungu.github.io/github-user-search/
 
 **Built with**
 
 JavaScript
+
 CSS custom properties
+
 HTLML5 markup
+
 Github API
 
 **What I learned**
